@@ -15,11 +15,11 @@ A simple Swift command-line program to convert an image into an Excel spreadshee
 
 ### Run the program
 
+`./ImageToExcel path/to/image [optional-path-to-output.xlsx]`
+
 ![run-program](readme-images/run-program.gif)
 
 ### Profit
-
-`./ImageToExcel path/to/image [optional-path-to-output.xlsx]`
 
 ![result](readme-images/result.png)
 
