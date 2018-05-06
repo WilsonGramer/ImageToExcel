@@ -1,0 +1,6 @@
+framework module Pods_ImageToExcel {
+  umbrella header "Pods-ImageToExcel-umbrella.h"
+
+  export *
+  module * { export * }
+}

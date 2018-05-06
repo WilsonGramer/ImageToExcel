@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3320D991CF11C8873B4F8B60 /* libPods-ImageToExcel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBBC2FC80B639874F841EA0 /* libPods-ImageToExcel.a */; };
 		C8BC56DA209E2B9800E2ADBF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BC56D9209E2B9800E2ADBF /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +24,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2FBBC2FC80B639874F841EA0 /* libPods-ImageToExcel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageToExcel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED471BAB812F601C4402B7A /* Pods-ImageToExcel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageToExcel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageToExcel/Pods-ImageToExcel.debug.xcconfig"; sourceTree = "<group>"; };
 		C8BC56D6209E2B9800E2ADBF /* ImageToExcel */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImageToExcel; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8BC56D9209E2B9800E2ADBF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C8BC56E0209E2CF800E2ADBF /* ImageToExcel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageToExcel-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0DC3FF8EE0D11C79F5D295E /* Pods-ImageToExcel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageToExcel.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageToExcel/Pods-ImageToExcel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3320D991CF11C8873B4F8B60 /* libPods-ImageToExcel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F5CE81DDCCB1E2BEFE6DEFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FBBC2FC80B639874F841EA0 /* libPods-ImageToExcel.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CA690817339DFC10AC52D4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ED471BAB812F601C4402B7A /* Pods-ImageToExcel.debug.xcconfig */,
+				D0DC3FF8EE0D11C79F5D295E /* Pods-ImageToExcel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C8BC56CD209E2B9800E2ADBF = {
 			isa = PBXGroup;
 			children = (
 				C8BC56D8209E2B9800E2ADBF /* ImageToExcel */,
 				C8BC56D7209E2B9800E2ADBF /* Products */,
+				4CA690817339DFC10AC52D4F /* Pods */,
+				3F5CE81DDCCB1E2BEFE6DEFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +82,7 @@
 		C8BC56D8209E2B9800E2ADBF /* ImageToExcel */ = {
 			isa = PBXGroup;
 			children = (
+				C8BC56E0209E2CF800E2ADBF /* ImageToExcel-Bridging-Header.h */,
 				C8BC56D9209E2B9800E2ADBF /* main.swift */,
 			);
 			path = ImageToExcel;
@@ -69,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8BC56DD209E2B9800E2ADBF /* Build configuration list for PBXNativeTarget "ImageToExcel" */;
 			buildPhases = (
+				15B9FAA9F666FFEE82CA066D /* [CP] Check Pods Manifest.lock */,
 				C8BC56D2209E2B9800E2ADBF /* Sources */,
 				C8BC56D3209E2B9800E2ADBF /* Frameworks */,
 				C8BC56D4209E2B9800E2ADBF /* CopyFiles */,
+				1A5019AF2EFA98A7B944CBCD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -113,6 +141,42 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15B9FAA9F666FFEE82CA066D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageToExcel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A5019AF2EFA98A7B944CBCD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageToExcel/Pods-ImageToExcel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8BC56D2209E2B9800E2ADBF /* Sources */ = {
@@ -241,20 +305,24 @@
 		};
 		C8BC56DE209E2B9800E2ADBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ED471BAB812F601C4402B7A /* Pods-ImageToExcel.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D42D4S8LQX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/ImageToExcel-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		C8BC56DF209E2B9800E2ADBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0DC3FF8EE0D11C79F5D295E /* Pods-ImageToExcel.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D42D4S8LQX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/ImageToExcel-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
