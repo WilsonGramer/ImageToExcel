@@ -127,7 +127,7 @@ func main(_ inputPath: String, _ outputPath: String) {
             format_set_fg_color(format, lxw_color_t(color))
             format_set_font_color(format, lxw_color_t(color))
             
-            worksheet_write_string(worksheet, lxw_row_t(y - 1), lxw_col_t(x - 1), "#\(hexString)", format) // Sets the cell's text to the hex string and writes the cell to the speadsheet
+            worksheet_write_string(worksheet, lxw_row_t(y - 1), lxw_col_t(x - 1), "", format) // Writes the cell to the speadsheet
         }
     }
     
